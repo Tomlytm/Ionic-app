@@ -1,7 +1,8 @@
 <template>
     <ion-header>
           <ion-toolbar>
-           <a class='return' href="/splash">Return</a>
+            <a class='return' href="/splash"> <ion-icon :icon="chevronBackOutline"></ion-icon></a>
+            <ion-icon slot="end" :icon="helpCircleOutline"></ion-icon>
           </ion-toolbar>
         </ion-header>
     
@@ -26,41 +27,40 @@
         </ion-item>
         
         <br>
-        <ion-button expand="block" color="primary">Sign In</ion-button>
+          <ion-button expand="block" color="tertiary">Sign In</ion-button>
+        
         
           </ion-card-content>
         </ion-card>
       </div>
-      
-        <ion-item >
-          <p class="ion-text-center">
+        <ion-content>
+          <p align="center">
           <a href="#"><b>Change Password</b>
         </a></p>
-        </ion-item>
+        </ion-content>
       </template>
       
       <script>
-      import { IonLabel, IonInput, IonItem, IonCard, IonCardContent, IonCardTitle, } from '@ionic/vue';
+      import { IonLabel, IonInput, IonItem, IonCard, IonCardContent, IonCardTitle, IonIcon} from '@ionic/vue';
       import { defineComponent } from 'vue';
+      import { chevronBackOutline, helpCircleOutline } from "ionicons/icons";
       
       export default defineComponent({
-        components: { IonLabel, IonInput, IonCard, IonCardContent,IonCardTitle, IonItem, }
+        components: { IonLabel, IonInput, IonCard, IonCardContent,IonCardTitle, IonItem, IonIcon},
+        setup(){
+          return {
+            chevronBackOutline, helpCircleOutline
+          }
+        }
       });
       </script>
     
       <style>
+      ion-label {
+        font-family: 'Verdana';
+      }
     .login-card {
     
       margin-top: 40%;
-    }
-    a{
-      text-decoration: none;
-      color: white;
-    }
-    .return {
-      color: aliceblue;
-    }
-    .ion-text-center {
-        text-align: center;
     }
     </style>
