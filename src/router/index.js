@@ -5,7 +5,7 @@ import SplashPage from '../views/SplashPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import ContentTest from '../views/ContentTest.vue'
 import LoginPage from '../views/LoginPage.vue'
-
+import ForgotPassword from '../views/ForgotPassword.vue'
 const routes = [
   {
     path: '/',
@@ -30,6 +30,11 @@ const routes = [
     path: '/l',
     name: 'l',
     component: LoginPage,
+  },
+  {
+    path: '/f',
+    name: 'f',
+    component: ForgotPassword,
   },
   {
     path: '/dashboard',

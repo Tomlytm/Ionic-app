@@ -2,7 +2,7 @@
     <ion-header>
           <ion-toolbar>
             <a class='return' href="/splash"> <ion-icon :icon="chevronBackOutline"></ion-icon></a>
-            <ion-icon slot="end" :icon="helpCircleOutline"></ion-icon>
+            <ion-button slot="end" color="tertiary">Done</ion-button>
           </ion-toolbar>
         </ion-header>
     
@@ -10,34 +10,20 @@
           
          <ion-card>
           <ion-card-header>
-            
-            <ion-card-title align="center">Hello!</ion-card-title>
-            <br>
+            <ion-card-title>Password Reset</ion-card-title>
           </ion-card-header>
       
           <ion-card-content>
+            <h4>Please enter the email address on your Top-up account</h4> <br>
+
             <ion-item>
           <ion-label position="floating">Email Address</ion-label>
           <ion-input type="email" placeholder="youremail@here.com"></ion-input>
         </ion-item>
-        <br>
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" placeholder="**********"></ion-input>
-        </ion-item>
-        
-        <br>
-          <ion-button expand="block" color="tertiary">Sign In</ion-button>
-        
         
           </ion-card-content>
         </ion-card>
       </div>
-        <ion-content>
-          <p align="center">
-          <a href="/f"><b>Forgot Password</b>
-        </a></p>
-        </ion-content>
       </template>
       
       <script>
@@ -56,11 +42,4 @@
       </script>
     
       <style>
-      ion-label {
-        font-family: 'Verdana';
-      }
-    .login-card {
-    
-      margin-top: 40%;
-    }
     </style>
