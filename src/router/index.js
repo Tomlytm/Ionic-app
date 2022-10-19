@@ -6,6 +6,7 @@ import RegisterPage from '../views/RegisterPage.vue'
 import ContentTest from '../views/ContentTest.vue'
 import LoginPage from '../views/LoginPage.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
+import AirtimePurchase from '../views/AirtimePurchase.vue'
 const routes = [
   {
     path: '/',
@@ -15,6 +16,11 @@ const routes = [
     path: '/splash',
     name: 'splash',
     component: SplashPage,
+  },
+  {
+    path: '/ap',
+    name: 'ap',
+    component: AirtimePurchase,
   },
   {
     path: '/register',

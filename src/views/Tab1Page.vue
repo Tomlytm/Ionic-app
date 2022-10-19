@@ -7,7 +7,6 @@
         <p slot="end" class="user-name">@Username.me</p>
         <ion-avatar slot="end">
         <img src="../assets/icons/4.png" alt="">
-        
         </ion-avatar>
         
       </ion-item>
@@ -21,7 +20,6 @@
               <ion-label class="ion-label1">
                 <ion-note class="ion-margin-start" color="white">
                  <span class="balance"> ACCOUNT BALANCE</span>
-                 
                   <br>
                   <p>
                     <ion-chip color="dark">
@@ -121,14 +119,15 @@
           </ion-row>
           <ion-list>
             <ion-list-header>
-              <ion-label class="rt">RECENT TRANSACTIONS</ion-label>
+              <ion-label class="rt">RECENT TRANSACTIONS </ion-label>
             </ion-list-header>
+            
             <ion-item class="list-item">
               <ion-icon slot="start" size="small" :icon="cash" color="success">
                 </ion-icon>
               <ion-label>
-               <span>WEEKLY TRIFT </span> 
-                <p>3.00pm</p>
+               <span>WEEKLY TRIFT </span>
+                <p>05 Aug 2021, 12:07</p>
               </ion-label>
               <ion-text slot="end" color="success">₦5,000</ion-text>
             </ion-item>
@@ -137,9 +136,13 @@
                 </ion-icon>
               <ion-label>
                <Span>AIRTIME</Span> 
-                <p>1.00pm</p>
+                <p>05 Oct 2021, 15:04</p>
               </ion-label>
               <ion-text slot="end" color="danger">₦3,000</ion-text>
+            </ion-item>
+            <ion-item class="ion-no-lines">
+              <p slot="end">more</p>
+              <ion-icon slot="end" size="small" :icon="chevronForward"></ion-icon>
             </ion-item>
         </ion-list>
         </ion-grid>
@@ -152,7 +155,7 @@
 
 <script>
 import { IonHeader, IonButton, IonAvatar, IonGrid, IonRow, IonCol, IonLabel, IonNote} from '@ionic/vue';
-import { grid, add, cash, chevronForwardOutline } from "ionicons/icons";
+import { grid, add, cash, chevronForwardOutline, chevronForward } from "ionicons/icons";
 
 export default ({
   name: 'Tab1Page',
@@ -161,7 +164,7 @@ export default ({
   setup() {
    
     return {
-      grid, add, cash, chevronForwardOutline
+      grid, add, cash, chevronForwardOutline, chevronForward
     }
     
   }

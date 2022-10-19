@@ -1,6 +1,6 @@
 <style>
 .register-card {
-  margin-top: 30%;
+  margin-top: 7%;
 }
 a{
   text-decoration: none;
@@ -27,7 +27,7 @@ ion-item ion-label {
 <ion-header>
       <ion-toolbar>
        <a class='return' href="/splash"> <ion-icon :icon="chevronBackOutline"></ion-icon></a>
-       <ion-button fill="outline" shape="round" slot="end">Next</ion-button>
+       <ion-button @click.prevent="signUp" fill="outline" shape="round" slot="end">Next</ion-button>
       </ion-toolbar>
     </ion-header>
 
@@ -39,18 +39,23 @@ ion-item ion-label {
       </ion-card-header>
       <ion-card-content>
       <ion-item>
+      <ion-label position="floating">Your name</ion-label>
+      <ion-input v-model="name" type="text" placeholder="Last Name & First Name"></ion-input>
+    </ion-item>
+    <br>
+      <ion-item>
       <ion-label position="floating">Email Address</ion-label>
-      <ion-input type="email" placeholder="youremail@here.com"></ion-input>
+      <ion-input v-model="email" type="email" placeholder="youremail@here.com"></ion-input>
     </ion-item>
     <br>
     <ion-item>
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" placeholder="**********"></ion-input>
+      <ion-input v-model="password" type="password" placeholder="**********"></ion-input>
     </ion-item>
     <br>
     <ion-item>
       <ion-label position="floating">Confirm Password</ion-label>
-      <ion-input type="password" placeholder="**********"></ion-input>
+      <ion-input v-model="confirm_password" type="password" placeholder="**********"></ion-input>
     </ion-item>
     <br>
     <ion-item>
@@ -75,12 +80,43 @@ ion-item ion-label {
   import { IonLabel, IonInput, IonItem, IonCard, IonCardContent, IonCardHeader,IonCardTitle, IonIcon} from '@ionic/vue';
   import { chevronBackOutline } from "ionicons/icons";
   import { defineComponent } from 'vue';
-  
+  import axios from 'axios';
+  // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*' ;
+  // axios.defaults.withCredentials = true;
+          
   export default defineComponent({
     components: { IonLabel, IonInput, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonIcon },
 
     setup(){
       return { chevronBackOutline }
+    },
+    data() {
+      return {
+        name: '',
+        email:'',
+        password: '',
+        confirm_password: ''
+      }
+    },
+    methods: {
+      signUp(){
+        axios.post('http://api.yestopup.com/api/register', {
+          name: this.name,
+          email: this.email,
+          password: this.password,
+          confirm_password: this.confirm_password
+        }
+        )
+        .then((response)=>{
+          console.log(response);
+        
+        
+        if(response.status==201){
+          localStorage.setItem('user-info', JSON.stringify(response.data));
+          this.$router.push({redirect: '/tabs/tab1'})
+        }
+      });
+      }
     }
   });
   </script>
