@@ -103,9 +103,10 @@
               <ion-card class="ion-text-center">
                 <ion-card-header>
                   <div align="center">
+                    <a href="/pb">
                     <ion-thumbnail>
-                      <img class="ion-img"  src="../assets/icons/debit-card.png" alt="">
-                    </ion-thumbnail>
+                     <img class="ion-img"  src="../assets/icons/debit-card.png" alt="">
+                    </ion-thumbnail></a> 
                   </div>
                 </ion-card-header>
                 <ion-card-content>
@@ -262,7 +263,8 @@ b {
 ion-card {
   box-shadow: -1px 11px 13px -6px rgb(0, 0, 0);
           border-radius: 10px !important;
-          margin: 10px 0;}
+          margin: 10px 5px;
+        }
 ion-thumbnail {
             width: 8vh;
             height: 8vh;

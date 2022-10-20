@@ -7,6 +7,7 @@ import ContentTest from '../views/ContentTest.vue'
 import LoginPage from '../views/LoginPage.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
 import AirtimePurchase from '../views/AirtimePurchase.vue'
+import PayBills from '../views/PayBills.vue'
 const routes = [
   {
     path: '/',
@@ -21,6 +22,11 @@ const routes = [
     path: '/ap',
     name: 'ap',
     component: AirtimePurchase,
+  },
+  {
+    path: '/pb',
+    name: 'pb',
+    component: PayBills,
   },
   {
     path: '/register',
