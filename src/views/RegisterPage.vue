@@ -99,23 +99,18 @@ ion-item ion-label {
       }
     },
     methods: {
-      signUp(){
-        axios.post('http://api.yestopup.com/api/register', {
+      async signUp(){
+       const results = await axios.post('http://api.yestopup.com/api/register', {
           name: this.name,
           email: this.email,
           password: this.password,
           confirm_password: this.confirm_password
+        }); 
+        console.log(results);
+        if(results.status==200){
+          localStorage.setItem('user-info', JSON.stringify(results.data));
+          this.$router.push({name:'splash'})
         }
-        )
-        .then((response)=>{
-          console.log(response);
-        
-        
-        if(response.status==201){
-          localStorage.setItem('user-info', JSON.stringify(response.data));
-          this.$router.push({redirect: '/tabs/tab1'})
-        }
-      });
       }
     }
   });

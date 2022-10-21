@@ -57,20 +57,18 @@
           }
         },
         methods: {
-          logIn(){
-            axios.post('http://api.yestopup.com/api/login', {
+          async logIn(){
+          const result = axios.post('http://api.yestopup.com/api/login', {
               email: this.email,
               password: this.password
             })
-            .then((response)=>{
-              console.log(response);
+              console.log(result);
         
         
-              if(response.status==201){
-                localStorage.setItem('user-info', JSON.stringify(response.data));
-                this.$router.push({redirect: '/tabs/tab1'})
+              if(result.status==200){
+                localStorage.setItem('user-info', JSON.stringify(result.data));
+                this.$router.push({name: 'splash'})
         }
-            })
           }
         }
       });
