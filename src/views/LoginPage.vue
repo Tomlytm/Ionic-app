@@ -141,7 +141,7 @@ ion-label {
 .login-card {
   background-color: rgb(13, 13, 13);
   margin: 0;
-  /* padding: .6rem; */
+  padding: 1.5rem;
   
 }
 .login-container {

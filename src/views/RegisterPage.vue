@@ -2,7 +2,7 @@
 .register-card {
   background-color: rgb(13, 13, 13);
   margin: 0;
-  padding: .7rem;
+  padding: 2rem;
   margin-top: -3rem;
 }
 a{
@@ -59,7 +59,7 @@ ion-item ion-label {
      <ion-card class="register-card">
       <ion-card-header class="register-card-header" align="center">
         <p class="register-greeting">Hey there,</p>
-        <ion-card-title style="font-family:Verdana;" >Create an Account</ion-card-title>
+        <h2 style="font-family:Verdana; margin-top: -.5em; color: white;" >Create an Account</h2>
       </ion-card-header>
       <ion-card-content>
       <ion-item class="register-item" color="light">
@@ -105,7 +105,7 @@ ion-item ion-label {
   </template>
   
   <script>
-  import { IonLabel, IonInput, IonItem, IonCard, IonCardContent, IonCardHeader,IonCardTitle, IonIcon} from '@ionic/vue';
+  import { IonLabel, IonInput, IonItem, IonCard, IonCardContent, IonCardHeader, IonIcon} from '@ionic/vue';
   import { chevronBackOutline, person, mail, lockClosed, key, eye } from "ionicons/icons";
   import { defineComponent } from 'vue';
   import axios from 'axios';
@@ -113,7 +113,7 @@ ion-item ion-label {
   // axios.defaults.withCredentials = true;
           
   export default defineComponent({
-    components: { IonLabel, IonInput, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonItem, IonIcon },
+    components: { IonLabel, IonInput, IonCard, IonCardContent, IonCardHeader, IonItem, IonIcon },
 
     setup(){
       return { chevronBackOutline, person, mail, lockClosed, key, eye }

@@ -2,7 +2,6 @@
     <ion-header>
           <ion-toolbar>
             <a class='return' href="/splash"> <ion-icon :icon="chevronBackOutline"></ion-icon></a>
-            
           </ion-toolbar>
         </ion-header>
     
