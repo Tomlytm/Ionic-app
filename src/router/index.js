@@ -57,8 +57,11 @@ const routes = [
     component: TabsPage,
     children: [
       {
-        path: '',
-        redirect: '/tabs/tab1'
+        name: 'tab1',
+        path: '/tab1',
+        redirect: '/tabs/tab1',
+        props: true
+
       },
       {
         path: 'tab1',

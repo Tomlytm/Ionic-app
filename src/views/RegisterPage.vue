@@ -123,7 +123,7 @@ ion-item ion-label {
         name: '',
         email:'',
         password: '',
-        confirm_password: ''
+        confirm_password: '',
       }
     },
     methods: {
@@ -134,13 +134,21 @@ ion-item ion-label {
           password: this.password,
           confirm_password: this.confirm_password
         }); 
-        console.log(results);
+        // console.log(results.data.data.name.split(' ')[0]);
+        
         if(results.status==200){
           localStorage.setItem('user-info', JSON.stringify(results.data));
-          this.$router.push({name:'splash'})
+          this.$router.push({name:'tab1'})
         }
       }
-    }
+    },
+      // mounted(){
+      //   let user = localStorage.getItem('user-info');
+      //   if(user){
+      //     this.$router.push({name:'tab1'})
+      //   }
+      // }
+    
   });
   </script>
   

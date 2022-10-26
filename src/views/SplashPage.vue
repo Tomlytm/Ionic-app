@@ -10,9 +10,9 @@
           </ion-card>
         </ion-card>
         <ion-card color="black">
-              <h1 style="font-weight:bolder">Welcome to TOPUP space</h1>
-              <h4 class="hider">
-              <b>Get</b>Monthly free transfers, a free debit card and smarter budgeting budgeting.
+              <h1 style="font-weight:bolder">Welcome</h1>
+              <h4>
+              Monthly free transfers, a free debit card and smarter budgeting budgeting.
             </h4>
             </ion-card>
           </div>
@@ -98,7 +98,12 @@ export default defineComponent({
     };
     return { slideOpts, imgss }
     
-  }
+  },
+  // methods: {
+  //   next(){
+  //     slides.slideNext
+  //   }
+  // }
 });
 </script>
 <style>

@@ -87,6 +87,7 @@ import {
   IonCardContent,
   IonCardTitle,
   IonIcon,
+  IonToolbar
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { chevronBackOutline, helpCircleOutline, mail, lockClosed,eye } from "ionicons/icons";
@@ -100,6 +101,7 @@ export default defineComponent({
     IonCardTitle,
     IonItem,
     IonIcon,
+    IonToolbar
     
   },
   setup() {
@@ -126,8 +128,9 @@ export default defineComponent({
       console.log(result);
 
       if (result.status == 200) {
+        localStorage.clear();
         localStorage.setItem("user-info", JSON.stringify(result.data));
-        this.$router.push({ name: "splash" });
+        this.$router.push({ name: "tab1" });
       }
     },
   },
