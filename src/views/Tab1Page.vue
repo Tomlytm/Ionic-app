@@ -43,7 +43,7 @@
         <p>Flex Naira</p>
         <ion-label >
           <ion-chip class="balance-container">
-       <h3 style="font-weight: bold; font-family: verdana;letter-spacing: 1px;"> ₦ 723,000</h3>
+       <h2 style="font-weight: bold; font-family: serif; letter-spacing: 1px;"> ₦ 723,000</h2>
        </ion-chip>
        <br>
        <br>
@@ -54,7 +54,7 @@
       
         <p>Flex Dollar</p><ion-label >
           <ion-chip class="balance-container">
-       <h3 style="font-weight: bold; font-family: verdana;letter-spacing: 1px;"> $ 7,050</h3>
+       <h2 style="font-weight: bold; font-family: serif; letter-spacing: 1px;"> $ 7,050</h2>
        </ion-chip>
        <br>
        <br>
@@ -66,7 +66,7 @@
       
         <p>Flex Euro</p><ion-label >
           <ion-chip class="balance-container">
-       <h3 style="font-weight: bold; font-family: verdana;letter-spacing: 1px;"> € 2,000</h3>
+       <h2 style="font-weight: bold; font-family: serif;letter-spacing: 1px;"> € 2,000</h2>
        </ion-chip>
        <br>
        <br>
