@@ -1,0 +1,7 @@
+{
+  "name": "muji",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
